@@ -8,6 +8,8 @@ app = Flask(__name__)
 # Configurar logs detalhados
 logging.basicConfig(level=logging.DEBUG)
 
+print("🔹 TESTE: A variável OPENAI_API_KEY é:", os.getenv("OPENAI_API_KEY"))
+
 # Forçando o carregamento correto da API Key
 api_key = os.getenv("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")
 if not api_key:
