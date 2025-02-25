@@ -1,8 +1,12 @@
 import logging  # 🔹 Importando o módulo corretamente
-from flask import Flask, request, jsonify
-import openai
+from dotenv import load_dotenv
 import os
-os.environ["OPENAI_API_KEY"] = "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"  # 🔹 Coloque sua chave real aqui
+
+# Carregar variáveis do arquivo .env
+load_dotenv()
+
+openai.api_key = os.getenv("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")
+
 
 
 app = Flask(__name__)
